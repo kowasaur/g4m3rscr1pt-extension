@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "g4m3rscr1pt",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.at",
+      "begin": "@",
+      "end": "\n"
+    },
+    "keywords": {
+      "name": "keyword.control",
+      "match": "\\b(yeah|nah|moment|https://imgur.com/jWr67J8)\\b"
+    },
+    "strings": {
+      "name": "string.quoted.other",
+      "begin": "]",
+      "end": "\\["
+    },
+    "numbers": {
+      "name": "constant.numeric",
+      "match": "\\b(a|e|i|o|u)+\\b"
+    },
+    "variables": {
+      "name": "variable.other",
+      "match": "\\b[^\\WaeiouAEIOU]+\\b"
+    }
+  },
+  "scopeName": "source.p0g"
+}

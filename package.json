@@ -1,0 +1,30 @@
+{
+  "name": "g4m3rscr1pt",
+  "displayName": "g4m3rscr1pt",
+  "description": "Syntax highlighting for g4m3rscr1pt",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "g4m3rscr1pt",
+        "extensions": [
+          ".p0g"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "g4m3rscr1pt",
+        "scopeName": "source.p0g",
+        "path": "./syntaxes/g4m3rscr1pt.tmLanguage.json"
+      }
+    ]
+  }
+}
