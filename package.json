@@ -2,6 +2,7 @@
   "name": "g4m3rscr1pt",
   "displayName": "g4m3rscr1pt",
   "description": "Syntax highlighting for g4m3rscr1pt",
+  "publisher": "kowasaur",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.57.0"
@@ -30,5 +31,9 @@
         }
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kowasaur/g4m3rscr1pt-extension.git"
   }
 }
