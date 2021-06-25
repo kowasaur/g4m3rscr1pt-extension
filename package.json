@@ -23,7 +23,11 @@
       {
         "language": "g4m3rscr1pt",
         "scopeName": "source.p0g",
-        "path": "./syntaxes/g4m3rscr1pt.tmLanguage.json"
+        "path": "./syntaxes/g4m3rscr1pt.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.javascript": "javascript",
+          "source.js": "javascript"
+        }
       }
     ]
   }

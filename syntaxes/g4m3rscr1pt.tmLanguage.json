@@ -4,8 +4,11 @@
   "patterns": [
     { "include": "#comments" },
     { "include": "#keywords" },
+    { "include": "#js" },
     { "include": "#strings" },
     { "include": "#numbers" },
+    { "include": "#functions" },
+    { "include": "#ignorethis" },
     { "include": "#variables" }
   ],
   "repository": {
@@ -16,7 +19,19 @@
     },
     "keywords": {
       "name": "keyword.control",
-      "match": "\\b(yeah|nah|moment|https://imgur.com/jWr67J8)\\b"
+      "match": "\\b(yeah|nah|https://imgur.com/jWr67J8)\\b"
+    },
+    "js": {
+      "begin": "(I'M CHEATING)(\\s?<)",
+      "end": "(>\\s?)(I'M NOT CHEATING ANYMORE)",
+      "beginCaptures": {
+        "1": { "name": "keyword.control" }
+      },
+      "endCaptures": {
+        "2": { "name": "keyword.control" }
+      },
+      "contentName": "meta.embedded.block.javascript",
+      "patterns": [{ "include": "source.js" }]
     },
     "strings": {
       "name": "string.quoted.other",
@@ -26,6 +41,24 @@
     "numbers": {
       "name": "constant.numeric",
       "match": "\\b(a|e|i|o|u)+\\b"
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "(\\b[^\\WaeiouAEIOU]+ )(moment)",
+          "captures": {
+            "1": { "name": "entity.name.function" },
+            "2": { "name": "keyword.control" }
+          }
+        },
+        {
+          "match": "(/+)([^\\WaeiouAEIOU]+\\b)",
+          "name": "entity.name.function"
+        }
+      ]
+    },
+    "ignorethis": {
+      "match": "\\?\\?\\!\\?1\\!"
     },
     "variables": {
       "name": "variable.other",
